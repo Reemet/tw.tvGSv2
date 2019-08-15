@@ -5,7 +5,9 @@
   "description": "Twitch API streams app for Smart TV's",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start-dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start": "node server.js",
+    "heroku-postbuild": "webpack -p",
     "build": "webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,6 +15,7 @@
     "axios": "0.16.2",
     "bluebird": "3.5.0",
     "es6-promise": "4.1.1",
+    "express": "^4.17.1",
     "hls.js": "^0.10.1",
     "lodash": "^4.17.10",
     "react": "15.6.1",
